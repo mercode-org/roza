@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- Dosya: animal_tr.aiml -->
+<!-- Son düzenleme: 31 Mayıs, 2020 -->
+<!--  -->
+<!-- Bu AIML dosyası, Roza bilgi kütüphanesinin bir parçasıdır. -->
+<!--  -->
+<!-- Roza, ALICE2 beyninin forku olan Rosie'nin çevirisidir, ve AIML 2.0 formatını destekleyen chatbot yazılımlarında kullanılmak üzere optimize edilmiştir -->
+<!--  -->
+<!-- Roza, Mercode topluluğu tarafından teliflenmiştir. -->
+<!--  -->
+<!-- Rosie, Pandorabots şirketi tarafından teliflenmiştir. -->
+<!--  -->
+<!-- Roza ve Rosie, GPLv3 ile lisanslanmıştır -->
+<!--  -->
+<!-- Bu dosya garanti olmadan yayınlanmıştır. -->
+<!--  -->
+<!-- Daha fazla bilgi için: -->
+<!-- http://www.ai.mercode.org -->
+<!-- http://www.pandorabots.com -->
+<!--  -->
+
+<category><pattern>BİR <set>animal</set> NE DER ^</pattern>
+<template><srai>SES <star/></srai></template>
+</category>
+<category><pattern><set>animals</set>LAR NE DER ^</pattern>
+<template><srai>SES <srai>TEKİL <star/></srai></srai></template>
+</category>
+<category><pattern><set>animal</set> NE SES ÇIKARIR ^</pattern>
+<template><srai>SES <star index="2"/></srai></template>
+</category>
+<category><pattern><set>animal</set>LAR NE SES ÇIKARIR ^</pattern>
+<template><srai>SES <srai>TEKİL <star index="2"/></srai></srai></template>
+</category>
+<category><pattern><set>animal</set>LAR NASIL ^</pattern>
+<template><srai>SES <star index="2"/></srai></template>
+</category>
+<category><pattern><set>animal</set>KAÇ BACAKLI ^</pattern>
+<template><srai>BACAKLAR <star index="2"/></srai></template>
+</category>
+<category><pattern><set>animals</set>KAÇ BACAKLILAR ^</pattern>
+<template><srai>BACAKLAR <srai>TEKİL <star index="2"/></srai></srai></template>
+</category>
+<category><pattern>_ 1 <set>animal</set> *</pattern>
+<template><srai><star/> 1 <srai>ÇOĞUL <star index="2"/></srai> <star index="3"/></srai></template>
+</category>
+<category><pattern>_ 1 <set>animal</set></pattern>
+<template><srai><star/> 1 <srai>ÇOĞUL <star index="2"/></srai></srai></template>
+</category>
+</aiml>
